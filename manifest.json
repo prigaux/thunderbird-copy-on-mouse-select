@@ -1,0 +1,21 @@
+{
+    "manifest_version": 2,
+    "name": "copy-on-mouse-select",
+    "description": "On mouseup, send document.getSelection() to navigator.clipboard. It is only a 4 lines content_script!",
+    "version": "1.0",
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "copy-on-mouse-select@rigaux.org",
+            "strict_min_version": "128.0"
+        }
+    },
+    "permissions": [
+        "messagesRead",
+        "messagesModify",
+        "clipboardWrite"
+    ],
+    "background": {
+        "scripts": [ "background.js" ],
+        "type": "module"
+    }
+}
